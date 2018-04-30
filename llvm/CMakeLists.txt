@@ -545,6 +545,11 @@ if(LLVM_BUILD_EXAMPLES)
   add_definitions(-DBUILD_EXAMPLES)
 endif(LLVM_BUILD_EXAMPLES)
 
+option(LLVM_BUILD_EXECUTION_ENGINE
+	"Build lib/ExecutionEngine." ON)
+
+set(LLVM_TOOLS_TO_BUILD "all" CACHE STRING "List of tools to build")
+
 option(LLVM_BUILD_TESTS
   "Build LLVM unit tests. If OFF, just generate build targets." OFF)
 option(LLVM_INCLUDE_TESTS "Generate build targets for the LLVM unit tests." ON)
